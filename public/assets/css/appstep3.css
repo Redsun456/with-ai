@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #e3f2fd; /* Light blue background */
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 750px;
+    width: 100%;
+    background: #ffffff; /* White for a clean contrast */
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+                0px 5px 12px -2px rgba(0, 0, 0, 0.1),
+                0px 18px 36px -6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 10px;
+}
+
+.container .title {
+    padding: 25px;
+    background: #bbdefb; /* Soft blue for header section */
+}
+
+.container .title p {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    color: #0d47a1; /* Deep blue for the title text */
+}
+
+.container .title p::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: #1565c0; /* Accent blue gradient for underline */
+}
+
+.container .title-Parents {
+    padding: 10px;
+    background: #f1f8e9;
+    font-size: 25px;
+    font-weight: 400;
+    color: #0d47a1;
+    text-align: center;
+}
+
+/* User details section */
+.user_details {
+    display: grid;
+    gap: 20px; /* Gap between input boxes */
+    padding: 20px;
+}
+
+.user_details .input_box {
+    width: 100%; /* Ensure full width of grid column */
+    margin-bottom: 12px;
+}
+
+/* Input Box Styling */
+.input_box label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+    color: #0d47a1; /* Deep blue for label */
+}
+
+.input_box input {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 15px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    background-color: #f1f8e9; /* Light green for input fields */
+    transition: all 120ms ease-out 0s;
+}
+
+.input_box input:focus,
+.input_box input:valid {
+    box-shadow: 0px 0px 0px 2px #1976d2; /* Bestlink blue shade for focus */
+}
+
+/* Gender Section */
+form .gender {
+    padding: 0px 25px;
+}
+
+.gender .gender_title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #0d47a1;
+}
+
+.gender .category {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.gender .category label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #0d47a1;
+}
+
+.gender .category label .dot {
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#radio_1:checked ~ .category label .one,
+#radio_2:checked ~ .category label .two,
+#radio_3:checked ~ .category label .three {
+    border-color: #d9d9d9;
+    background: #1565c0; /* Blue for active radio buttons */
+}
+
+.gender input {
+    display: none;
+}
+
+/* Register Button */
+.reg_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #007bff; /* Blue color, adjustable based on theme */
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white; /* Text color */
+    margin: 15px 0;
+}
+
+.reg_btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.btnnext {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 8px; /* Space between text and icon */
+}
+
+.uil {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.reg_btn:hover .uil {
+    transform: translateX(5px); /* Slide the icon to the right when hovered */
+}
+
+/* Requirements Section */
+.requirements-section {
+    width: 30%;
+    padding: 40px;
+    background-color: #bbdefb; /* Bestlink College of the Philippines inspired blue */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 53px;
+    align-self: flex-start;
+}
+
+.requirements-section h2 {
+    font-size: 20px;
+    color: #0d47a1; /* Deep blue */
+    margin-bottom: 20px;
+}
+
+.requirements-section p {
+    font-size: 14px;
+    color: #0d47a1; /* Lighter shade for paragraph text */
+    margin-bottom: 30px;
+}
+
+.requirements-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.requirements-section ul li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #0d47a1;
+}
+
+/* Responsive Design */
+
+/* Adjustments for tablet and smaller screens */
+@media (max-width: 768px) {
+    .user_details {
+        grid-template-columns: 1fr; /* One column on smaller screens */
+    }
+}
+
+/* Further adjustments for smaller screens */
+@media screen and (max-width: 584px) {
+    .user_details {
+        max-height: 340px;
+        overflow-y: scroll;
+    }
+
+    .user_details::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .user_details .input_box {
+        width: 100%;
+    }
+
+    .requirements-section {
+        width: 100%; /* Full width for small screens */
+        padding: 20px;
+    }
+}
+
+/* Gender section adjustments for very small screens */
+@media screen and (max-width: 419px) {
+    .gender .category {
+        flex-direction: column; /* Stack radio buttons vertically */
+    }   
+}
