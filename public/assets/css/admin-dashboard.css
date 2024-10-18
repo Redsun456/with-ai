@@ -1,0 +1,146 @@
+.search-container-admin{
+  display: inline-block;
+  margin-top: 10px;
+  float: right;
+
+}
+#searchInput {
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#searchButton {
+  margin-left: 5px;
+  background-color: #007bff; /* Blue background */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#searchButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.page-label-container{
+  color: #000000;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+}
+
+.page-label-container h2{
+  margin-left: 20px;
+}
+
+.container{
+  margin-top: 2px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+}
+.stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card {
+  background-color: #c0bdbd;
+  color: #fffbf4;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Colors for individual cards */
+.card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.stat-group {
+  display: flex;
+  flex-direction: column;
+}
+.stat-item {
+  margin-bottom: 10px;
+}
+.stat-count {
+  font-size: 36px;
+  font-weight: bold;
+}
+.stat-label {
+  font-size: 16px;
+}
+
+/* Chart section */
+.chart-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.chart-container {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+}
+canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .stats {
+      flex-direction: column;
+  }
+  .chart-section {
+      flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+      padding: 15px;
+  }
+  .card, .chart-container {
+      min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+      padding: 15px;
+  }
+  .chart-container {
+      padding: 15px;
+  }
+  .stat-count {
+      font-size: 28px;
+  }
+  .stat-label {
+      font-size: 14px;
+  }
+}

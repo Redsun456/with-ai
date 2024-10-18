@@ -1,0 +1,127 @@
+.settings-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+}
+
+.account-section {
+  background-color: #f9fbff;
+  padding: 100px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+}
+
+.account-section h1, h2 {
+  color: #222;
+  font-weight: 600;
+}
+
+.account-section h1 {
+  font-size: 28px;
+}
+
+.account-section h2 {
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.avatar-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.avatar-section p {
+  color: #757575;
+  font-size: 14px;
+}
+
+.avatar-placeholder {
+  width: 120px;
+  height: 120px;
+  background-color: #b0b0b0;
+  border-radius: 50%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-placeholder i {
+  font-size: 28px;
+  color: #fff;
+}
+
+.profile-section {
+  margin-top: 40px;
+}
+
+.profile-section p {
+  color: #757575;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 500;
+  transition: color 0.3s; /* Smooth transition when label color changes */
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #b0b0b0;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 10px 40px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  background-color: #f0f4f8;
+  color: #333333;
+  font-size: 14px;
+  transition: border-color 0.3s; /* Smooth transition for the input border color */
+}
+
+/* Change the border color and label color when input is focused */
+.input-wrapper input:focus {
+  border-color: #1976d2; /* Blue border on focus */
+  outline: none;
+}
+
+/* Make label blue when the associated input is focused */
+.input-wrapper input:focus ~ label {
+  color: #1976d2; /* Change label to blue when input is focused */
+}
+
+/* Disabled input styles */
+input:disabled {
+  background-color: #e0e6ed;
+}
+
+/* Media queries and other styles can be added below */
+
+
+}

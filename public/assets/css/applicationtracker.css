@@ -1,0 +1,95 @@
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+/* Status card */
+.status-card {
+    display: center;
+    align-items: center;
+    background-color: #f0f4f8;
+    border-radius: 12px;
+    border: 1px solid #d0d7de;
+    margin-bottom: 40px;
+    transition: background-color 0.3s ease;
+    padding: 50px;
+}
+
+.status-icon {
+    font-size: 50px;
+    margin-right: 20px;
+}
+
+/* Approved Status */
+.approved-status {
+    background-color: #c8e6c9; /* Light green background */
+    border-color: #4caf50;    /* Green border */
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.4);
+}
+
+.approved-status .status-icon {
+    color: #4caf50; /* Green icon */
+}
+
+.approved-status .status-info h2 {
+    color: #388e3c; /* Dark green text */
+}
+
+/* Pending Status */
+.pending-status {
+    background-color: #fff9c4; /* Light yellow background */
+    border-color: #ffeb3b;    /* Yellow border */
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.4);
+}
+
+.pending-status .status-icon {
+    color: #ffeb3b; /* Yellow icon */
+}
+
+.pending-status .status-info h2 {
+    color: #fbc02d; /* Dark yellow text */
+}
+
+/* Rejected Status */
+.rejected-status {
+    background-color: #ffcdd2; /* Light red background */
+    border-color: #f44336;    /* Red border */
+    box-shadow: 0 0 10px rgba(244, 67, 54, 0.4);
+}
+
+.rejected-status .status-icon {
+    color: #f44336; /* Red icon */
+}
+
+.rejected-status .status-info h2 {
+    color: #d32f2f; /* Dark red text */
+}
+
+/* Status info */
+.status-info h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.status-info p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .status-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .status-icon {
+        margin: 0 0 20px 0;
+    }
+}
+
+
+}

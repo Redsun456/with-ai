@@ -1,0 +1,114 @@
+.app-review-container {
+  width: 90%;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.app-review-container header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.app-review-container header h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Search Bar and Filter Container */
+.app-review-container .search-filter-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.app-review-container #search-bar {
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.app-review-container #status-filter {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Table Styling */
+.app-review-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.app-review-container table th,
+.app-review-container table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.app-review-container table th {
+  background-color: #f8f8f8;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Status Label Styling */
+.app-review-container .status {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* Status Colors */
+.app-review-container .approved .status {
+  background-color: #28a745 !important; /* Green for approved */
+}
+
+.app-review-container .pending .status {
+  background-color: #ffcc00 !important; /* Yellow for pending */
+}
+
+.app-review-container .rejected .status {
+  background-color: #dc3545 !important; /* Red for rejected */
+}
+
+/* Button Styling */
+.app-review-container .view-btn, .delete-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Button Colors */
+.app-review-container .view-btn {
+  background-color: #3498db !important; 
+}
+.app-review-container .delete-btn {
+  background-color: #dc3545 !important;
+}
+
+.app-review-container .view-btn:hover {
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-review-container .search-filter-container {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .app-review-container #search-bar,
+  .app-review-container #status-filter {
+      width: 100%;
+  }
+}

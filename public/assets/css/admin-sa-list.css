@@ -1,0 +1,67 @@
+/* Container Styling */
+.student-assistant-container {
+  width: 90%;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.student-assistant-container header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.student-assistant-container header h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Search Bar Styling */
+.search-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-container input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Table Styling */
+#student-assistant-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#student-assistant-table th, #student-assistant-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#student-assistant-table th {
+  background-color: #f8f8f8;
+}
+
+#student-assistant-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .student-assistant-container {
+      width: 100%;
+  }
+
+  .search-container input[type="text"] {
+      width: 100%;
+  }
+}
