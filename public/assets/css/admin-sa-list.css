@@ -1,29 +1,18 @@
 /* Container Styling */
 .student-assistant-container {
-  width: 90%;
-  margin: 20px auto;
+  width: 100%;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Header */
-.student-assistant-container header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.student-assistant-container header h1 {
-  font-size: 2rem;
-  color: #333;
-}
-
 /* Search Bar Styling */
 .search-container {
   margin-bottom: 20px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .search-container input[type="text"] {
@@ -32,6 +21,19 @@
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 1rem;
+}
+
+.add-sa-btn {
+  padding: 10px 20px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-sa-btn:hover {
+  background-color: #adb5bd;
 }
 
 /* Table Styling */
@@ -53,6 +55,69 @@
 
 #student-assistant-table tbody tr:hover {
   background-color: #f1f1f1;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 400px;
+  text-align: center;
+}
+
+/* Close Button Styling */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+.modal-actions {
+  text-align: right;
+}
+
+.modal-actions .btn.save {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.modal-actions .btn.save:hover {
+  background-color: #adb5bd;
 }
 
 /* Responsive Design */

@@ -2,7 +2,7 @@
     $page_label = "Concerns";
 @endphp
 
-<x-admin-sidenav :pageLabel="$page_label">
+<x-admin-sidenav2 :pageLabel="$page_label">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,8 +41,8 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>001</td>
-                        <td>John Doe</td>
+                        <td>21014741</td>
+                        <td>User</td>
                         <td>Issue with login</td>
                         <td>2024-10-08</td>
                         <td><span class="status pending">Pending</span></td>
@@ -58,4 +58,4 @@
     </div>
 </body>
 </html>
-</x-admin-sidenav>
+</x-admin-sidenav2>

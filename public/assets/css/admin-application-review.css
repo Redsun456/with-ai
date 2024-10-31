@@ -1,10 +1,10 @@
 .app-review-container {
-  width: 90%;
-  margin: 20px auto;
+  width: 100%;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  overflow-x: scroll;
 }
 
 .app-review-container header {
@@ -90,7 +90,7 @@
 
 /* Button Colors */
 .app-review-container .view-btn {
-  background-color: #3498db !important; 
+  background-color: #6c757d !important; 
 }
 .app-review-container .delete-btn {
   background-color: #dc3545 !important;

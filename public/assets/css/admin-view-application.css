@@ -1,7 +1,6 @@
 /* Main Container */
 .application-container {
-  width: 90%;
-  margin: 20px auto;
+  width: 100%;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -97,6 +96,11 @@ header h1 {
 
 .application-actions .reject {
   background-color: #dc3545;
+  color: #fff;
+}
+
+.application-actions .back {
+  background-color: gray;
   color: #fff;
 }
 

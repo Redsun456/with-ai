@@ -1,7 +1,7 @@
 @php
     $page_label = "Admin Profile";
 @endphp
-<x-admin-sidenav :pageLabel="$page_label">
+<x-admin-sidenav2 :pageLabel="$page_label">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -117,11 +117,13 @@
                 <i class="fas fa-lock icon"></i>
                   <input type="password" id="cp" >
               </div> 
-          </div>
+            </div>
+
+            <button class="save-btn">Save</button>
 
         </div> 
     </div>
 </div>
 </body>
 </html>
-</x-admin-sidenav>
+</x-admin-sidenav2>

@@ -2,7 +2,7 @@
     $page_label = "Admin Announcement";
 @endphp
 
-<x-admin-sidenav :pageLabel="$page_label">
+<x-admin-sidenav2 :pageLabel="$page_label">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,4 +71,4 @@
     <script src="{{asset ('assets/js/admin-announcement.js') }}"></script>
 </body>
 </html>
-</x-admin-sidenav>
+</x-admin-sidenav2>

@@ -1,11 +1,11 @@
 @php
     $page_label = "Profile";
 @endphp
-<x-user-sidenav :pageLabel="$page_label"> 
+<x-user-sidenav2 :pageLabel="$page_label"> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Dashboard</title>
+  <title>Profile</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -120,11 +120,12 @@
                   <input type="password" id="cp" >
               </div> 
           </div>
-
+          
+          <button class="save-btn">Save</button>
 
         </div>
 </div>
 </body>
 </html>
 
-</x-user-sidenav>
+</x-user-sidenav2>

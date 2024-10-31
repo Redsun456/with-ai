@@ -11,7 +11,7 @@ class UserController extends Controller
     public function index()
     {
         // Fetch all users from the database
-        $users = User::all();
+        $users = User::where('role', '!=', 'admin')->get();
     
         // Pass the $users variable to the view
         return view('admin.admin-user-account-management', compact('users'));
@@ -41,15 +41,23 @@ class UserController extends Controller
 
     // Search for users
     public function search(Request $request)
-{
-    $search = $request->input('search'); // Get the search query from the form
+    {
+        $search = $request->input('search'); // Get the search query from the form
+        
+        // Start the query and exclude users with the role 'admin'
+        $users = User::where('role', '!=', 'admin')
+            ->where(function ($query) use ($search) {
+                $query->where('id', 'like', "%{$search}%")
+                    ->orWhere('name', 'like', "%{$search}%")
+                    ->orWhere('email', 'like', "%{$search}%")
+                    ->orWhere('student_number', 'like', "%{$search}%");
+            })
+            ->get();
     
-    // Search for users whose student number matches the query
-    $users = User::where('name', 'like', "%$search%")->get();
-
-    // Pass the filtered users to the view
-    return view('admin.admin-user-account-management', compact('users'));
-}
+        // Pass the filtered users to the view
+        return view('admin.admin-user-account-management', compact('users'));
+    }
+    
 
 public function update(Request $request, $id)
 {

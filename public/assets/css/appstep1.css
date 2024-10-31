@@ -13,7 +13,8 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #e3f2fd; /* Light blue background */
+    background: #212529; /* Light blue background */
+    color: #f8f9fa;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -21,7 +22,7 @@ body{
   
     max-width: 750px;
     width: 100%;
-    background: #ffffff; /* White for a clean contrast */
+    background: #343a40; /* White for a clean contrast */
     border-radius: 0.5rem;
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
                 0px 5px 12px -2px rgba(0, 0, 0, 0.1),
@@ -34,7 +35,7 @@ body{
 
 .container .title{
     padding: 25px;
-    background: #bbdefb;
+    background: #495057;
      /* Soft blue for header section */
      
 }
@@ -43,7 +44,7 @@ body{
     font-size: 25px;
     font-weight: 500;
     position: relative;
-    color: #0d47a1; /* Deep blue for the title text */
+    color: #adb5bd; /* Deep blue for the title text */
 }
 
 .container .title p::before{
@@ -53,16 +54,7 @@ body{
     left: 0;
     width: 30px;
     height: 3px;
-    background: #1565c0; /* Accent blue gradient for underline */
-}
-.container .title-Parents {
-    padding: 10px;
-    background: #f1f8e9;
-    font-size: 25px;
-    font-weight: 400;
-    position: center;
-    color: #0d47a1;
-    position: relative;
+    background: #6c757d; /* Accent blue gradient for underline */
 }
 
 .user_details{
@@ -82,7 +74,7 @@ body{
     font-weight: 500;
     margin-bottom: 5px;
     display: block;
-    color: #0d47a1; /* Deep blue for label */
+    color: #ced4da;
 }
 
 .input_box input{
@@ -94,13 +86,14 @@ body{
     font-size: 16px;
     padding-left: 15px;
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-    background-color: #f1f8e9; /* Light green for input fields */
+    background-color: #495057; /* Light green for input fields */
+    color: #f8f9fa; /* Light text for contrast */
     transition: all 120ms ease-out 0s;
 }
 
 .input_box input:focus,
 .input_box input:valid{
-    box-shadow: 0px 0px 0px 2px #1976d2; /* Bestlink blue shade for focus */
+    box-shadow: 0px 0px 0px 2px #6c757d; 
 }
 
 form .gender{
@@ -110,7 +103,7 @@ form .gender{
 .gender .gender_title{
     font-size: 20px;
     font-weight: 500;
-    color: #0d47a1;
+    color: #f8f9fa;
 }
 
 .gender .category{
@@ -124,7 +117,7 @@ form .gender{
     display: flex;
     align-items: center;
     cursor: pointer;
-    color: #0d47a1;
+    color: #f8f9fa;
 }
 
 .gender .category label .dot{
@@ -141,7 +134,7 @@ form .gender{
 #radio_2:checked ~ .category label .two,
 #radio_3:checked ~ .category label .three{
     border-color: #d9d9d9;
-    background: #1565c0; /* Blue for active radio buttons */
+    background: black; /* Blue for active radio buttons */
 }
 
 .gender input{
@@ -151,14 +144,15 @@ form .gender{
 
 .reg_btn {
     display: inline-flex;
+    display: center;
     align-items: center;
     justify-content: center;
     height: 45px;
-    max-width: 200px;
+    max-width: 325px;
     width: 100%;
     border: none;
     outline: none;
-    background-color: #007bff; /* Blue color, you can adjust based on your theme */
+    background-color: #6c757d; /* Blue color, you can adjust based on your theme */
     padding-right: 50px;
     border-radius: 15px;
     cursor: pointer;
@@ -169,20 +163,28 @@ form .gender{
 }
 
 .reg_btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #adb5bd; /* Darker blue on hover */
     
 }
 
 .btnnext {
-    font-size: 16px;
-    font-weight: bold;
-    margin-right: 8px; /* Space between text and icon */
+        display: block;
+        color: white;
+        display: block;
+        width: 100%;
+        background-color:transparent;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.3s ease
     
 }
 
 .uil {
     font-size: 20px;
     transition: transform 0.3s ease;
+    font-weight: bold;
 }
 
 .reg_btn:hover .uil {
@@ -190,12 +192,66 @@ form .gender{
 }
 
 .reg_btn{
-    padding: 25px;
+    padding: 20px;
     margin: 23px;
-    margin-top: 15px;
+    margin-top: -5px;
+    margin-bottom: 50px;
+}
+
+.back_btn {
+    display: inline-flex;
+    display: center;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 325px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #6c757d; /* Blue color, you can adjust based on your theme */
+    padding-right: 50px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white; /* Text color */
+}
+
+.back_btn:hover {
+    background-color: #adb5bd; /* Darker blue on hover */
+}
+
+.back_btn .btnback {
+    font-size: 16px;
+    margin-right: 8px; /* Space between the text and icon */
+    font-weight: bold;
+}
+
+.back_btn i {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+    font-weight: bold;
+    transform: rotate(180deg); /* Reverse the direction of the icon */
+}
+
+.back_btn:hover i {
+    transform: translateX(-5px) rotate(180deg); /* Move the icon to the left on hover */
+}
+
+.back_btn{
+    padding: 20px;
+    margin: 23px;
+    margin-top: -5px;
+    margin-bottom: 50px;
+}
+.back_btn a{
+    text-decoration: none;
+    color: white;
 }
 
 
+.reg_btn input:hover{
+    background: linear-gradient(to right, #0d47a1, #1565c0);
+}
 
 @media screen and (max-width: 584px){
 
@@ -228,7 +284,7 @@ form .gender{
     width: 35%; /* Set a percentage width for better responsiveness */
     height: fit-content;
     padding: 40px;
-    background-color: #bbdefb; /* Bestlink College of the Philippines inspired dark blue */
+    background-color: #495057; /* Bestlink College of the Philippines inspired dark blue */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: -webkit-sticky; /* Sticky for Safari */
@@ -239,13 +295,13 @@ form .gender{
 
 .requirements-section h2 {
     font-size: 20px;
-    color: #0d47a1; /* White for better contrast */
+    color: #f8f9fa; /* White for better contrast */
     margin-bottom: 20px;
 }
 
 .requirements-section p {
     font-size: 14px;
-    color: #0d47a1; /* Lighter shade for paragraph text */
+    color: #f8f9fa; /* Lighter shade for paragraph text */
     margin-bottom: 30px;
     
 }
@@ -260,7 +316,7 @@ form .gender{
     font-size: 14px;
     margin-bottom: 8px;
     
-    color: #0d47a1; /* Lighter shade for list items */
+    color: #f8f9fa; /* Lighter shade for list items */
     
 }
 
@@ -277,7 +333,7 @@ form .gender{
 }
 .upload-container i {
     font-size: 48px;
-    color: #b3b3b3;
+    color: #666666;
 }
 .upload-container p {
     margin: 10px 0;
@@ -311,18 +367,18 @@ form .gender{
     width: 400px;
 }
 .file-upload-button {
-    background-color: #2c3e50;
-    color: white;
+    background-color: #495057;
+    color: 666666;
     padding: 8px 16px;
     border: none;
     cursor: pointer;
 }
 .file-upload-button:hover {
-    background-color: #1a252f;
+    background-color: #25292d;
 }
 .file-upload-text {
     padding: 8px 16px;
-    background-color: #f8f9fa;
+    background-color: #6c757d;
     flex-grow: 1;
 }
 input[type="file"] {

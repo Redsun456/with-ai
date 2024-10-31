@@ -1,0 +1,42 @@
+/* Container for the SA schedule */
+.sa-schedule-container {
+  width: 100%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.sa-schedule-container h2 {
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Schedule Table Styling */
+.sa-schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sa-schedule-table th, .sa-schedule-table td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.sa-schedule-table th {
+  background-color: #f8f8f8;
+  font-weight: normal;
+}
+
+.sa-schedule-table td {
+  font-size: 16px;
+  color: #555;
+}
+
+.sa-schedule-table tr:nth-child(even) {
+  background-color: #f7f7f7;
+}

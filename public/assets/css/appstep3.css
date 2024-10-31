@@ -143,41 +143,115 @@ form .gender {
     display: none;
 }
 
-/* Register Button */
 .reg_btn {
     display: inline-flex;
+    display: center;
     align-items: center;
     justify-content: center;
     height: 45px;
-    max-width: 200px;
+    max-width: 325px;
     width: 100%;
     border: none;
     outline: none;
-    background-color: #007bff; /* Blue color, adjustable based on theme */
+    background-color: #007bff; /* Blue color, you can adjust based on your theme */
+    padding-right: 50px;
     border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     color: white; /* Text color */
-    margin: 15px 0;
+    
+   
 }
 
 .reg_btn:hover {
     background-color: #0056b3; /* Darker blue on hover */
+    
 }
 
 .btnnext {
-    font-size: 16px;
-    font-weight: bold;
-    margin-right: 8px; /* Space between text and icon */
+        display: block;
+        color: white;
+        display: block;
+        width: 100%;
+        background-color:transparent;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.3s ease
+    
 }
 
 .uil {
     font-size: 20px;
     transition: transform 0.3s ease;
+    font-weight: bold;
 }
 
 .reg_btn:hover .uil {
     transform: translateX(5px); /* Slide the icon to the right when hovered */
+}
+
+.reg_btn{
+    padding: 20px;
+    margin: 23px;
+    margin-top: -5px;
+    margin-bottom: 50px;
+}
+
+.back_btn {
+    display: inline-flex;
+    display: center;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 325px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #007bff; /* Blue color, you can adjust based on your theme */
+    padding-right: 50px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white; /* Text color */
+}
+
+.back_btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.back_btn .btnback {
+    font-size: 16px;
+    margin-right: 8px; /* Space between the text and icon */
+    font-weight: bold;
+}
+
+.back_btn i {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+    font-weight: bold;
+    transform: rotate(180deg); /* Reverse the direction of the icon */
+}
+
+.back_btn:hover i {
+    transform: translateX(-5px) rotate(180deg); /* Move the icon to the left on hover */
+}
+
+.back_btn{
+    padding: 20px;
+    margin: 23px;
+    margin-top: -5px;
+    margin-bottom: 50px;
+}
+.back_btn a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.reg_btn input:hover{
+    background: linear-gradient(to right, #0d47a1, #1565c0);
 }
 
 /* Requirements Section */

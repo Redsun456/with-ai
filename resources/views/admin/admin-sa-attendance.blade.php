@@ -1,7 +1,7 @@
 @php
     $page_label = "Student Assistants Attendance";
 @endphp
-<x-admin-sidenav :pageLabel="$page_label">
+<x-admin-sidenav2 :pageLabel="$page_label">
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,10 +15,9 @@
 <body>
 
   <div class="attendance-panel">
-    <header>
-        <h1>Student Assistant Attendance Management</h1>
-    </header>
-
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search by student name or department...">
+    </div>
     <!-- SA Attendance List Panel -->
     <div class="sa-attendance-list">
         <table>
@@ -27,24 +26,20 @@
                     <th>Student Number</th>
                     <th>Name</th>
                     <th>Department</th>
+                    <th>Location</th>
+                    <th>Officer Incharge</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>2021-00123</td>
-                    <td>John Doe</td>
-                    <td>IT Department</td>
+                    <td>User</td>
+                    <td>CSS Department</td>
+                    <td>MV CAMPUS RM201</td>
+                    <td>Juan Dela Cruz</td>
                     <td>
                         <button class="btn mark-attendance" onclick="openAttendanceModal('2021-00123')">Mark Attendance</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2022-00234</td>
-                    <td>Jane Smith</td>
-                    <td>HR Department</td>
-                    <td>
-                        <button class="btn mark-attendance" onclick="openAttendanceModal('2022-00234')">Mark Attendance</button>
                     </td>
                 </tr>
             </tbody>
@@ -59,7 +54,6 @@
 
             <form>
                 <div class="attendance-detail">
-                    <h3>12-Day Duty Attendance Input</h3>
                     <table>
                         <thead>
                             <tr>
@@ -163,4 +157,4 @@
 
 </html>
 
-</x-admin-sidenav>
+</x-admin-sidenav2>

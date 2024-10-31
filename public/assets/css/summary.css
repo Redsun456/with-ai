@@ -1,0 +1,119 @@
+/* Reset some basic elements */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #212529;
+  color: #f8f9fa;
+}
+
+/* Container for the summary page */
+.container {
+  width: 80%;
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: #343a40;
+  padding: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+/* Title styling */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #adb5bd; /* Adjusted color */
+}
+
+/* Summary content */
+.summary-content {
+  font-size: 16px;
+  color: #ced4da;
+}
+
+/* Section headings */
+.summary-content h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #adb5bd;
+  font-size: 18px;
+  border-bottom: 2px solid #adb5bd;
+  padding-bottom: 5px;
+}
+
+/* Paragraph text */
+.summary-content p {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+/* Uploaded file links */
+.summary-content a {
+  color: #adb5bd;
+  text-decoration: none;
+}
+
+.summary-content a:hover {
+  text-decoration: underline;
+}
+
+/* Button container */
+.reg_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* Back button */
+.btnback {
+  background-color: #6c757d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btnback:hover {
+  background-color: #adb5bd;
+}
+
+/* Confirm button */
+form button {
+  background-color: #6c757d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #adb5bd;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .container {
+      width: 90%;
+  }
+  
+  .reg_btn {
+      flex-direction: column;
+  }
+  
+  .btnback, form button {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}

@@ -5,24 +5,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body{
-    
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #e3f2fd; /* Light blue background */
+    background: #212529; /* Dark background */
+    color: #f8f9fa; /* Light text color */
     font-family: 'Poppins', sans-serif;
 }
 
-.container{ 
-    
+.container{
     max-width: 750px;
     width: 100%;
-    background: #ffffff; /* White for a clean contrast */
+    background: #343a40; /* Dark gray background */
     border-radius: 0.5rem;
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
                 0px 5px 12px -2px rgba(0, 0, 0, 0.1),
@@ -33,17 +31,14 @@ body{
 
 .container .title{
     padding: 25px;
-    background: #bbdefb;
-    
-     /* Soft blue for header section */
-     
+    background: #495057; /* Darker header background */
 }
 
 .container .title p{
     font-size: 25px;
     font-weight: 500;
     position: relative;
-    color: #0d47a1; /* Deep blue for the title text */
+    color: #adb5bd; /* Light gray text */
 }
 
 .container .title p::before{
@@ -53,16 +48,16 @@ body{
     left: 0;
     width: 30px;
     height: 3px;
-    background: #1565c0; /* Accent blue gradient for underline */
+    background: #6c757d; /* Accent underline */
 }
+
 .container .title-Parents {
     padding: 10px;
-    background: #f1f8e9;
+    background: #495057; /* Darker background for parent title */
     font-size: 25px;
     font-weight: 400;
+    color: #adb5bd; /* Light gray text */
     position: center;
-    color: #0d47a1;
-    position: relative;
 }
 
 .user_details{
@@ -82,7 +77,7 @@ body{
     font-weight: 500;
     margin-bottom: 5px;
     display: block;
-    color: #0d47a1; /* Deep blue for label */
+    color: #ced4da; /* Lighter text for labels */
 }
 
 .input_box input{
@@ -94,13 +89,14 @@ body{
     font-size: 16px;
     padding-left: 15px;
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-    background-color: #f1f8e9; /* Light green for input fields */
+    background-color: #495057; /* Darker background for input fields */
+    color: #f8f9fa; /* Light text for input */
     transition: all 120ms ease-out 0s;
 }
 
 .input_box input:focus,
 .input_box input:valid{
-    box-shadow: 0px 0px 0px 2px #1976d2; /* Bestlink blue shade for focus */
+    box-shadow: 0px 0px 0px 2px #6c757d; /* Accent border on focus */
 }
 
 form .gender{
@@ -110,7 +106,7 @@ form .gender{
 .gender .gender_title{
     font-size: 20px;
     font-weight: 500;
-    color: #0d47a1;
+    color: #f8f9fa; /* Light text */
 }
 
 .gender .category{
@@ -124,7 +120,7 @@ form .gender{
     display: flex;
     align-items: center;
     cursor: pointer;
-    color: #0d47a1;
+    color: #f8f9fa; /* Light text */
 }
 
 .gender .category label .dot{
@@ -141,16 +137,17 @@ form .gender{
 #radio_2:checked ~ .category label .two,
 #radio_3:checked ~ .category label .three{
     border-color: #d9d9d9;
-    background: #1565c0; /* Blue for active radio buttons */
+    background: black; /* Black for active radio buttons */
 }
 
 .gender input{
     display: none;
 }
 
-.reg_btn {
+
+/* Button Styles */
+.reg_btn, .back_btn {
     display: inline-flex;
-    display: center;
     align-items: center;
     justify-content: center;
     height: 45px;
@@ -158,26 +155,33 @@ form .gender{
     width: 100%;
     border: none;
     outline: none;
-    background-color: #007bff; /* Blue color, you can adjust based on your theme */
+    background-color: #6c757d; /* Light grey */
     padding-right: 50px;
     border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    color: white; /* Text color */
-    
-   
+    color: white;
+    padding: 20px;
+    margin: 23px;
+    margin-top: -5px;
+    margin-bottom: 50px;
 }
 
-.reg_btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    
+.reg_btn:hover, .back_btn:hover {
+    background-color: #adb5bd; /* Darker grey on hover */
 }
 
-.btnnext {
+/* Inside Button Styling */
+.btnnext, .btnback {
+    display: block;
+    color: white;
+    width: 100%;
+    background-color: transparent;
+    border: none;
     font-size: 16px;
     font-weight: bold;
-    margin-right: 8px; /* Space between text and icon */
-    
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .uil {
@@ -187,86 +191,49 @@ form .gender{
 }
 
 .reg_btn:hover .uil {
-    transform: translateX(5px); /* Slide the icon to the right when hovered */
-}
-
-.reg_btn{
-    padding: 20px;
-    margin: 23px;
-    margin-top: -5px;
-    margin-bottom: 50px;
-}
-
-.back_btn {
-    display: inline-flex;
-    display: center;
-    align-items: center;
-    justify-content: center;
-    height: 45px;
-    max-width: 325px;
-    width: 100%;
-    border: none;
-    outline: none;
-    background-color: #007bff; /* Blue color, you can adjust based on your theme */
-    padding-right: 50px;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    color: white; /* Text color */
-}
-
-.back_btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateX(5px);
 }
 
 .back_btn .btnback {
-    font-size: 16px;
-    margin-right: 8px; /* Space between the text and icon */
-    font-weight: bold;
+    margin-right: 8px;
 }
 
 .back_btn i {
     font-size: 20px;
     transition: transform 0.3s ease;
     font-weight: bold;
-    transform: rotate(180deg); /* Reverse the direction of the icon */
+    transform: rotate(180deg);
 }
 
 .back_btn:hover i {
-    transform: translateX(-5px) rotate(180deg); /* Move the icon to the left on hover */
+    transform: translateX(-5px) rotate(180deg);
 }
 
-.back_btn{
-    padding: 20px;
-    margin: 23px;
-    margin-top: -5px;
-    margin-bottom: 50px;
+/* Link Styling */
+.back_btn a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
 }
 
-
-.reg_btn input:hover{
-    background: linear-gradient(to right, #0d47a1, #1565c0);
+.reg_btn input:hover {
+    background: linear-gradient(to right, #adb5bd, #6c757d);
 }
 
 @media screen and (max-width: 584px){
-
     .user_details{
         max-height: 340px;
         overflow-y: scroll;
     }
-
     .user_details::-webkit-scrollbar{
         width: 0;
     }
-
     .user_details .input_box{
         width: 100%;
     }
-
     .gender .category{
         width: 100%;
     }
-
 }
 
 @media screen and (max-width: 419px){
@@ -276,42 +243,37 @@ form .gender{
 }
 
 .requirements-section {
-    width: 35%; /* Set a percentage width for better responsiveness */
+    width: 35%;
     height: fit-content;
     padding: 40px;
-    background-color: #bbdefb; /* Bestlink College of the Philippines inspired dark blue */
+    background-color: #495057; /* Section background */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: -webkit-sticky; /* Sticky for Safari */
+    position: -webkit-sticky;
     position: sticky;
-    top: 10px; /* Adjusts the distance from the top */
-    align-self: flex-start; /* Keeps it aligned when scrolling */
+    top: 10px;
+    align-self: flex-start;
 }
 
 .requirements-section h2 {
     font-size: 20px;
-    color: #0d47a1; /* White for better contrast */
+    color: #f8f9fa; /* Light text */
     margin-bottom: 20px;
-    
 }
 
 .requirements-section p {
     font-size: 14px;
-    color: #0d47a1; /* Lighter shade for paragraph text */
+    color: #f8f9fa; /* Lighter text */
     margin-bottom: 30px;
-    
 }
 
 .requirements-section ul {
     list-style-type: disc;
     padding-left: 20px;
-   
 }
 
 .requirements-section ul li {
     font-size: 14px;
     margin-bottom: 8px;
-    
-    color: #0d47a1; /* Lighter shade for list items */
-    
+    color: #f8f9fa;
 }

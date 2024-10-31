@@ -1,7 +1,7 @@
 @php
-    $page_label = "Student Assistants Attendance";
+    $page_label = "Student Assistants Scheduling";
 @endphp
-<x-admin-sidenav :pageLabel="$page_label">
+<x-admin-sidenav2 :pageLabel="$page_label">
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,16 +9,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset ('assets/css/admin-sa-scheduling.css')}}">
-    <title>Student Assistants Attendance</title>
+    <title>Student Assistants Scheduling</title>
 </head>
 
 <body>
 
     <div class="schedule-panel">
-        <header>
-            <h1>Student Assistant Scheduling Management</h1>
-        </header>
-
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search by student name or department...">
+        </div>
         <!-- SA List Panel -->
         <div class="sa-schedule-list">
             <table>
@@ -32,19 +31,11 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>2021-00123</td>
-                        <td>John Doe</td>
-                        <td>IT Department</td>
+                        <td>21011234</td>
+                        <td>User</td>
+                        <td>CSS Department</td>
                         <td>
                             <button class="btn manage-schedule" onclick="openScheduleModal('2021-00123')">Manage Schedule</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2022-00234</td>
-                        <td>Jane Smith</td>
-                        <td>HR Department</td>
-                        <td>
-                            <button class="btn manage-schedule" onclick="openScheduleModal('2022-00234')">Manage Schedule</button>
                         </td>
                     </tr>
                 </tbody>
@@ -59,7 +50,7 @@
 
                 <form>
                     <div class="schedule-detail">
-                        <h3>Set Detailed 12-Day Duty Schedule</h3>
+                        <h3>Set Schedule</h3>
                         <table>
                             <thead>
                                 <tr>
@@ -152,4 +143,4 @@
 
 </html>
 
-</x-admin-sidenav>
+</x-admin-sidenav2>

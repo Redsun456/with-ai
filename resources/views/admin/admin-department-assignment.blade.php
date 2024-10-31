@@ -1,7 +1,7 @@
 @php
     $page_label = "Student Assistants Attendance";
 @endphp
-<x-admin-sidenav :pageLabel="$page_label">
+<x-admin-sidenav2 :pageLabel="$page_label">
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,10 +15,10 @@
 <body>
 
   <div class="department-panel">
-    <header>
-        <h1>Department Designation Management</h1>
-    </header>
-
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search by student name or department...">
+    </div>
     <!-- SA Department Assignment List Panel -->
     <div class="sa-department-list">
         <table>
@@ -31,22 +31,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>2021-00123</td>
-                    <td>John Doe</td>
-                    <td>IT Department</td>
-                    <td>
-                        <button class="btn assign-department" onclick="openDepartmentModal('2021-00123')">Assign / Update Department</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2022-00234</td>
-                    <td>Jane Smith</td>
-                    <td>HR Department</td>
-                    <td>
-                        <button class="btn assign-department" onclick="openDepartmentModal('2022-00234')">Assign / Update Department</button>
-                    </td>
-                </tr>
+               <tr>
+                   <td>21011234</td>
+                   <td>User</td>
+                   <td>CSS Department</td>
+                   <td><button class="assign-department-btn" onclick="openDepartmentModal()">Assign Department</button></td>
+               </tr>
             </tbody>
         </table>
     </div>
@@ -118,4 +108,4 @@
 
 </html>
 
-</x-admin-sidenav>
+</x-admin-sidenav2>

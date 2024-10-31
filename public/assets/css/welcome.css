@@ -16,19 +16,20 @@ body, html {
 
 .login-section {
     width: 50%;
-    background-color: #ffffff;
+    background-color: #343a40;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .login-box {
-    background-color: #ffffff;
-    padding: -50px;
+    background-color: #343a40;
+    padding: 50px;
     border-radius: 20px;
     max-width: 350px;
     width: 100%;
     text-align: center;
+    color: #ffffff; /* Adjusted for contrast */
 }
 
 .logo img {
@@ -40,6 +41,7 @@ h2 {
     margin: 20px 0;
     font-size: 24px;
     font-weight: bold;
+    color: #ffffff; /* Adjusted for contrast */
 }
 
 form {
@@ -51,14 +53,13 @@ form {
     position: relative;
     margin-bottom: 20px;
     text-align: left;
-    box-shadow: #303131;
 }
 
 .input-group label {
     display: block;
     font-size: 14px;
     margin-bottom: 5px;
-    color: #303131; /* Bold label color */
+    color: #cccccc; /* Light label color */
     font-weight: bold;
 }
 
@@ -73,16 +74,16 @@ form {
 }
 
 .input-group input:focus {
-    border-color: #003366; /* Border color on focus */
-    box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3); /* Glow effect on focus */
-    outline: none; /* Remove the default outline */
+    border-color: #495057; /* Border color on focus */
+    box-shadow: 0 4px 12px rgba(52, 58, 64, 0.3); /* Glow effect on focus */
+    outline: none;
 }
 
 /* Submit Button Styling */
 button {
     width: 100%;
     padding: 12px;
-    background-color: #003366;
+    background-color: #495057;
     color: white;
     border: none;
     border-radius: 6px;
@@ -92,14 +93,14 @@ button {
 }
 
 button:hover {
-    background-color: #0039A6;
-    transform: scale(1.05); /* Slight scaling effect on hover */
+    background-color: #6c757d;
+    transform: scale(1.05);
 }
 
 /* Info Section */
 .info-section {
     width: 50%;
-    background: linear-gradient(135deg, #0039a6, #1e90ff);
+    background: linear-gradient(135deg, #343a40, #495057);
     color: white;
     display: flex;
     flex-direction: column;
@@ -129,7 +130,7 @@ button:hover {
 }
 
 .info-section p a:hover {
-    color: #3202f4;
+    color: #adb5bd;
 }
 
 .info-section::before, .info-section::after {
@@ -186,14 +187,17 @@ button:hover {
     }
 
     .info-section {
-        display: none; /* Hide the right section on small screens */
+        display: none;
     }
 }
 
 #togglePassword {
     position: absolute;
-    right: 10px; /* Adjust as needed */
+    right: 15px; /* Adjust if necessary to fit inside input */
     top: 65%;
     transform: translateY(-50%);
+    font-size: 20px;
+    color: #495057; /* Set to match the input styling */
     cursor: pointer;
+    z-index: 1;
 }

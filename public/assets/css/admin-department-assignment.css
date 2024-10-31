@@ -1,13 +1,13 @@
 /* Main Container */
 .department-panel {
-    width: 90%;
-    margin: 20px auto;
+    width: 100%;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Header */
 header {
     text-align: center;
     margin-bottom: 20px;
@@ -18,7 +18,22 @@ header h1 {
     color: #333;
 }
 
-/* SA Department List Table */
+/* Search Bar Styling */
+.search-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-container input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* SA Department List Table Styling */
 .sa-department-list table {
     width: 100%;
     border-collapse: collapse;
@@ -35,6 +50,7 @@ header h1 {
     background-color: #f8f8f8;
 }
 
+/* Button Styling in the Table */
 .sa-department-list .btn {
     padding: 8px 12px;
     border: none;
@@ -43,11 +59,25 @@ header h1 {
 }
 
 .sa-department-list .assign-department {
-    background-color: #0099ff;
+    background-color: #6c757d;
     color: #fff;
 }
 
 .sa-department-list .btn:hover {
+    opacity: 0.9;
+}
+
+.assign-department-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6c757d;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.assign-department-btn:hover {
     opacity: 0.9;
 }
 
@@ -77,6 +107,7 @@ header h1 {
     max-height: 80%;
 }
 
+/* Close Button for Modal */
 .close-btn {
     position: absolute;
     top: 10px;
@@ -86,7 +117,7 @@ header h1 {
     color: #333;
 }
 
-/* Form Elements */
+/* Form Elements within Modal */
 .form-group {
     margin-bottom: 15px;
 }
@@ -114,10 +145,21 @@ select {
 }
 
 .save {
-    background-color: #28a745;
+    background-color: #6c757d;
     color: #fff;
 }
 
 .btn:hover {
     opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .department-panel {
+        width: 100%;
+    }
+
+    .search-container input[type="text"] {
+        width: 100%;
+    }
 }

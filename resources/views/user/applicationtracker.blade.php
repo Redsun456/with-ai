@@ -1,13 +1,12 @@
 @php
-    $page_label = "Dashboard";
+    $page_label = "Application Tracker";
 @endphp
-<x-user-sidenav :pageLabel="$page_label"> 
+<x-user-sidenav2 :pageLabel="$page_label"> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <title>Application Tracker</title>
     <link rel="stylesheet" href="{{asset ('assets/css/applicationtracker.css')}}">
     
@@ -60,4 +59,4 @@
 
 </body>
 </html>
-</x-user-sidenav>
+</x-user-sidenav2>

@@ -1,0 +1,62 @@
+/* Container for the SA attendance */
+.sa-attendance-container {
+  width: 100%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.sa-attendance-container h2 {
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Attendance Table Styling */
+.sa-attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sa-attendance-table th, .sa-attendance-table td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.sa-attendance-table th {
+  background-color: #f8f8f8;
+  font-weight: normal;
+}
+
+.sa-attendance-table td {
+  font-size: 16px;
+  color: #555;
+}
+
+.sa-attendance-table tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+/* Status Labels */
+.status {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.status.present {
+  background-color: #28a745;
+}
+
+.status.late {
+  background-color: #ffc107;
+}
+
+.status.absent {
+  background-color: #dc3545;
+}

@@ -2,7 +2,7 @@
     $page_label = "Disbursement";
 @endphp
 
-<x-admin-sidenav :pageLabel="$page_label">
+<x-admin-sidenav2 :pageLabel="$page_label">
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +16,7 @@
 <body>
 <div class="disbursement-container">
     <div class="disbursement-filter">
-        <input type="text" id="search-disbursement" placeholder="Search by beneficiary name...">
+        <input type="text" id="search-disbursement" placeholder="Search by SA name...">
         <select id="disbursement-status-filter">
             <option value="all">All Statuses</option>
             <option value="completed">Completed</option>
@@ -56,12 +56,12 @@
         <h2>Add New Disbursement</h2>
         <form id="disbursement-form">
             <div class="form-group">
-                <label for="beneficiary-no">SA Student Number</label>
-                <input type="text" id="beneficiary-no" name="beneficiary-no" placeholder="Enter Beneficiary Student Number" required>
+                <label for="sa-no">SA Student Number</label>
+                <input type="text" id="sa-no" name="sa-no" placeholder="Enter Student Number" required>
             </div>
             <div class="form-group">
-                <label for="beneficiary-name">SA Name</label>
-                <input type="text" id="beneficiary-name" name="beneficiary-name" placeholder="Enter Beneficiary name" required>
+                <label for="sa-name">SA Name</label>
+                <input type="text" id="sa-name" name="sa-name" placeholder="Enter name" required>
             </div>
             <div class="form-group">
                 <label for="disbursement-amount">Amount</label>
@@ -106,4 +106,4 @@
 
 </html>
 
-</x-admin-sidenav>
+</x-admin-sidenav2>

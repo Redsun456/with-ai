@@ -1,7 +1,7 @@
 @php
     $page_label = "User Management";
 @endphp
-<x-admin-sidenav :pageLabel="$page_label">
+<x-admin-sidenav2 :pageLabel="$page_label">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +26,7 @@
                 <form method="POST" action="{{ route('users.store') }}">
                     @csrf
                     <div class="user-form-group">
-                        <label for="name">Name</label>
+                        <label for="name">Username</label>
                         <input type="text" id="name" name="name" required>
                     </div>
                     <div class="user-form-group">
@@ -57,7 +57,7 @@
             @csrf
             @method('PUT')
             <div class="user-form-group">
-                <label for="editName">Name</label>
+                <label for="editName">Username</label>
                 <input type="text" id="editName" name="name" required>
             </div>
             <div class="user-form-group">
@@ -79,23 +79,20 @@
     </div>
 </div>
 
-
-        <!-- Search form -->
-        <form method="GET" action="{{ route('users.search') }}">
+        
             <div class="search-group">
                 <span><i class='bx bx-search'></i></span>
-                <input type="text" id="searchUser" name="search" placeholder="Search by Student Name...">
+                <input type="text" id="searchUser" placeholder="Search users..." onkeyup="searchTable()">
             </div>
-        </form>
 
         <!-- Display the users -->
-        <table class="user-table">
+        <table class="user-table" id="userTable">
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Email</th>
                     <th>Student Number</th>
-                    <th>Name</th>
+                    <th>Username</th>
                     <th>Password (Encrypted)</th>
                     <th>Actions</th>
                 </tr>
@@ -166,7 +163,24 @@
         }
 
         document.getElementById('openSaveModal').addEventListener('click', openSaveModal);
+
+        function searchTable() {
+        const input = document.getElementById("searchUser").value.toLowerCase();
+        const rows = document.getElementById("userTable").getElementsByTagName("tr");
+
+        for (let i = 1; i < rows.length; i++) {
+        const cells = rows[i].getElementsByTagName("td");
+        let match = false;
+        for (let j = 0; j < cells.length; j++) {
+          if (cells[j].textContent.toLowerCase().includes(input)) {
+              match = true;
+              break;
+          }
+      }
+        rows[i].style.display = match ? "" : "none";
+  }
+}
     </script>
 </body>
 </html>
-</x-admin-sidenav>
+</x-admin-sidenav2>

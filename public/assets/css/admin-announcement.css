@@ -1,8 +1,7 @@
 
 /* Announcement Container */
 .announcement-container {
-  width: 90%;
-  margin: 20px auto;
+  width: 100%;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -52,7 +51,7 @@
 
 .create-announcement-btn {
   padding: 10px 20px;
-  background-color: #28a745;
+  background-color: #6c757d;
   color: white;
   border: none;
   border-radius: 5px;
@@ -60,7 +59,7 @@
 }
 
 .create-announcement-btn:hover {
-  background-color: #218838;
+  background-color: #adb5bd;
 }
 
 /* Modal Styling */
@@ -146,7 +145,7 @@
 
 .submit-btn {
   padding: 10px;
-  background-color: #3498db;
+  background-color: #6c757d;
   color: white;
   border: none;
   border-radius: 5px;
@@ -154,7 +153,7 @@
 }
 
 .submit-btn:hover {
-  background-color: #2980b9;
+  background-color: #adb5bd;
 }
 
 /* Responsive Design */

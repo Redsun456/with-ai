@@ -2,7 +2,7 @@
     $page_label = "Admin Dashboard";
 @endphp
 
-<x-admin-sidenav :pageLabel="$page_label">
+<x-admin-sidenav2 :pageLabel="$page_label">
 
 <!DOCTYPE html>
 <html lang="en">
@@ -98,5 +98,5 @@
 </body>
 </html>
 
-</x-admin-sidenav>
+</x-admin-sidenav2>
 

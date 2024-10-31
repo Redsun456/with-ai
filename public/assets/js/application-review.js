@@ -1,28 +1,34 @@
-// Filter table based on status
-function filterTable() {
-    const filterValue = document.getElementById("status-filter").value;
-    const rows = document.querySelectorAll("#application-table tbody tr");
-
-    rows.forEach(row => {
-        const status = row.classList.contains(filterValue) || filterValue === 'all';
-        row.style.display = status ? '' : 'none';
-    });
-}
-
-// Search functionality
 function searchTable() {
     const input = document.getElementById("search-bar").value.toLowerCase();
-    const rows = document.querySelectorAll("#application-table tbody tr");
+    const rows = document.getElementById("application-table").getElementsByTagName("tr");
 
-    rows.forEach(row => {
-        const name = row.cells[1].innerText.toLowerCase();
-        row.style.display = name.includes(input) ? '' : 'none';
-    });
+    for (let i = 1; i < rows.length; i++) {
+        const cells = rows[i].getElementsByTagName("td");
+        let match = false;
+        for (let j = 0; j < cells.length; j++) {
+            if (cells[j].textContent.toLowerCase().includes(input)) {
+                match = true;
+                break;
+            }
+        }
+        rows[i].style.display = match ? "" : "none";
+    }
 }
 
-// Simulate the "View Application" action
-function viewApplication(studentNumber) {
-    alert(`View Application: ${studentNumber}`);
-    // You can redirect to an actual view page or handle it as needed:
-    // window.location.href = `view_application.php?student_number=${studentNumber}`;
+function filterTable() {
+    const filter = document.getElementById("status-filter").value.toLowerCase();
+    const rows = document.getElementById("application-table").getElementsByTagName("tr");
+
+    for (let i = 1; i < rows.length; i++) {
+        const statusCell = rows[i].getElementsByTagName("td")[6];
+        if (filter === "all" || statusCell.textContent.toLowerCase().includes(filter)) {
+            rows[i].style.display = "";
+        } else {
+            rows[i].style.display = "none";
+        }
+    }
+}
+
+function confirmDelete() {
+    return confirm("Are you sure you want to delete this application? This action cannot be undone.");
 }
