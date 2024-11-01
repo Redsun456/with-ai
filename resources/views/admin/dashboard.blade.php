@@ -40,6 +40,7 @@
             </div>
            
             <div class="card">
+                <a href="/admin/disbursement">
                 <h3>Disbursement</h3>
                 <div class="stat-group">
                     <div class="stat-item">
@@ -51,6 +52,7 @@
                         <span class="stat-label">Pending</span>
                     </div>
                 </div>
+            </a>
             </div>
             <div class="card">
                 <a href="/admin/user-account-management">
@@ -68,6 +70,7 @@
             </a>
             </div>
             <div class="card">
+                <a href="/admin/concerns">
                 <h3>Concerns</h3>
                 <div class="stat-group">
                     <div class="stat-item">
@@ -78,9 +81,11 @@
                         <span class="stat-count">0</span>
                         <span class="stat-label">Resolved</span>
                     </div>
-                </div>           
+                </div>   
+                </a>        
             </div>
             <div class="card">
+                <a href="/admin/sa-list">
                 <h3>Student Assistant</h3>
                 <div class="stat-group">
                     <div class="stat-item">
@@ -89,6 +94,7 @@
                     </div>
                 </div>
             </div>
+            </a>
         </div>
 
     
