@@ -19,66 +19,72 @@
         <!-- Dashboard Summary Cards -->
         <div class="stats">
             <div class="card">
+                <a href="/admin/application-review">
                 <h3>Application Review</h3>
+              
                 <div class="stat-group">
                     <div class="stat-item">
-                        <span class="stat-count">120</span>
+                        <span class="stat-count">{{ $pendingApplications }}</span>
                         <span class="stat-label">Pending</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-count">80</span>
+                        <span class="stat-count">{{ $approvedApplications }}</span>
                         <span class="stat-label">Approved</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-count">20</span>
+                        <span class="stat-count">{{ $rejectedApplications }}</span>
                         <span class="stat-label">Rejected</span>
                     </div>
                 </div>
+            </a>
             </div>
+           
             <div class="card">
                 <h3>Disbursement</h3>
                 <div class="stat-group">
                     <div class="stat-item">
-                        <span class="stat-count">₱25,000</span>
+                        <span class="stat-count">₱0</span>
                         <span class="stat-label">Disbursed</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-count">₱10,000</span>
+                        <span class="stat-count">₱0</span>
                         <span class="stat-label">Pending</span>
                     </div>
                 </div>
             </div>
             <div class="card">
+                <a href="/admin/user-account-management">
                 <h3>Account Management</h3>
                 <div class="stat-group">
                     <div class="stat-item">
-                        <span class="stat-count">5</span>
+                        <span class="stat-count">{{$adminCount}}</span>
                         <span class="stat-label">Admins</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-count">200</span>
+                        <span class="stat-count">{{$userCount}}</span>
                         <span class="stat-label">Users</span>
                     </div>
                 </div>
+            </a>
             </div>
             <div class="card">
                 <h3>Concerns</h3>
                 <div class="stat-group">
                     <div class="stat-item">
-                        <span class="stat-count">15</span>
+                        <span class="stat-count">0</span>
                         <span class="stat-label">Open</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-count">5</span>
+                        <span class="stat-count">0</span>
                         <span class="stat-label">Resolved</span>
                     </div>
-                </div>
+                </div>           
             </div>
             <div class="card">
                 <h3>Student Assistant</h3>
                 <div class="stat-group">
                     <div class="stat-item">
-                        <span class="stat-count">100</span>
+                        <span class="stat-count">0</span>
                         <span class="stat-label">Active</span>
                     </div>
                 </div>

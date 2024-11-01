@@ -77,6 +77,11 @@
   margin-bottom: 10px;
 }
 
+.card a{
+  text-decoration: none;
+  color: #fffbf4;
+}
+
 .stat-group {
   display: flex;
   flex-direction: column;
