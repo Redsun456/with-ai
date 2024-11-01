@@ -19,9 +19,9 @@
     <div class="department-card">
         <h3>Department Name: Information Technology</h3>
         <p><strong>Assigned Role:</strong> IT Support Assistant</p>
-        <p><strong>Supervisor:</strong> John Doe</p>
-        <p><strong>Contact:</strong> johndoe@example.com</p>
-        <p><strong>Location:</strong> Building A, Room 204</p>
+        <p><strong>Supervisor:</strong> Juan Dela Cruz</p>
+        <p><strong>Contact:</strong> juand@gmail.com</p>
+        <p><strong>Location:</strong> MV RM.201</p>
     </div>
 </div>
 </body>
