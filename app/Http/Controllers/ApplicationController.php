@@ -34,17 +34,18 @@ class ApplicationController extends Controller
             'requirement_files.*' => 'file|mimes:jpg,png,svg,gif,pdf|max:4096',
         ]);
 
-        // Store ID file
-        $validated['id_file'] = $request->file('id_file')->store('uploads/ids');
+        // Store ID file in `public/uploads/ids`
+    $validated['id_file'] = $request->file('id_file')->store('public/uploads/ids');
 
-        // Store multiple requirement files
-        $files = [];
-        if ($request->hasFile('requirement_files')) {
-            foreach ($request->file('requirement_files') as $file) {
-                $files[] = $file->store('uploads/requirement_files');
-            }
-        }
-        $validated['requirement_files'] = json_encode($files);
+// Store multiple requirement files in `public/uploads/requirement_files`
+    $files = [];
+    if ($request->hasFile('requirement_files')) {
+    foreach ($request->file('requirement_files') as $file) {
+        $files[] = $file->store('public/uploads/requirement_files');
+    }
+}
+$validated['requirement_files'] = json_encode($files);
+
 
         // Temporarily store the validated data in the session
         $request->session()->put('step1', $validated);

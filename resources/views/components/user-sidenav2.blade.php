@@ -18,7 +18,7 @@
         <div class="avatar-container text-center">
             <img src="{{asset('assets/images/avatar.webp')}}" alt="Avatar" class="avatar">
             <p class="username text-white">User</p>
-            <p class="email text-white">User@gmail.com</p>
+            <p class="email text-white">user@gmail.com</p>
         </div>
         
         <div class="container mt-5">

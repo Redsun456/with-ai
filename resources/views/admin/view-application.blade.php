@@ -22,13 +22,13 @@
             <!-- ID Picture and Uploaded Requirements Section -->
             <div class="id-requirements-section">
                 <div class="id-picture">
-                    <img src="{{ asset('storage/' . $applicant->id_picture) }}" alt="ID Picture">
+                    <img src="{{ asset('storage/uploads/ids/' . $applicant->id_picture) }}" alt="ID Picture">
                 </div>
                 <div class="requirements">
                     <h2>Requirements Uploaded</h2>
                     <ul>
                         @foreach($applicant->requirement_files as $requirement)
-                            <li><a href="{{ asset('storage/' . $requirement) }}" target="_blank">{{ ucfirst(str_replace('_', ' ', pathinfo($requirement, PATHINFO_FILENAME))) }}</a></li>
+                            <li><a href="{{ asset('storage/uploads/requirement_files/' . $requirement) }}" target="_blank">{{ ucfirst(str_replace('_', ' ', pathinfo($requirement, PATHINFO_FILENAME))) }}</a></li>
                         @endforeach
                     </ul>
                 </div>
