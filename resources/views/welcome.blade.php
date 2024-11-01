@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Management System - Sign In</title>
+    <title>Financial Assitance Management System - Sign In</title>
+    <link rel="icon" href="{{ asset('assets/images/bcplg.png') }}" type="image/png">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{{ asset ('assets/css/welcome.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
